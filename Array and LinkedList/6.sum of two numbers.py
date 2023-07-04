@@ -1,16 +1,10 @@
-def solution(nums, target):
-    answer=[]
+def solution(nums,target):
+    answer = [0] * 2
     n = len(nums)
-    for i in range(n):
-        for j in range(0+i,n):
-            if(nums[i]+nums[j]==target):
-                if(nums[i]!=nums[j]):
-                    answer.append(nums[i])
-                    answer.append(nums[j])
-    if(len(answer)==0):
-        answer= [0,0]
-    else:
-        answer.sort()
+    for i in range(n-1):
+        for j in range(i+1,n):
+            if nums[i]+nums[j]==target:
+                return sorted([nums[i],nums[j]])
     return answer
         
                                        
