@@ -2,9 +2,9 @@ def solution(sticks):
     answer = 1
     max = sticks[-1]
     n = len(sticks)
-    for i in range(n-15-1),-1:
+    for i in range(n-1,-1,-1):
         if sticks[i]>max:
-            answer+1
+            answer+=1
             max = sticks[i]
     return answer
 
