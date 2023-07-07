@@ -1,17 +1,3 @@
-def dic_solution(nums):
-    answer = -1
-    sH = dict()
-    for i in nums:
-        if(i in sH):
-            sH[i]+=1
-        else:
-            sH[i]=1
-    
-    for i in sH:
-        if(sH[i]==1):
-            if(i>answer):
-                answer=i
-    return answer
 
 def solution(nums):
     answer = -1
