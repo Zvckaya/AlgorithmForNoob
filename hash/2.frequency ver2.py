@@ -1,17 +1,12 @@
 from collections import defaultdict, Counter
 def solution(nums):
     answer = -1
-    sH = dict()
-    for i in nums:
-        if(i in sH):
-            sH[i]+=1
-        else:
-            sH[i]=1
-    
-    for i in sH:
-        if(sH[i]==1):
-            if(i>answer):
-                answer=i
+    nH = defaultdict(int)
+    for x in nums:
+        nH[x] +=1
+    for key in nH:
+        if nH[key] == 1:
+            answer = max(answer,key)
     return answer
         
                 
